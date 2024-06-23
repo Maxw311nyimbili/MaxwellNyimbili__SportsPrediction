@@ -25,23 +25,12 @@ def install_required_libraries():
             subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
 
 
-try:
-    # Attempt to import necessary libraries
-    import streamlit as st
-    import numpy as np
-    import joblib
-    from sklearn.ensemble import RandomForestRegressor
-except ImportError:
-    # If import fails, install required libraries
-    install_required_libraries()
-    # Retry importing libraries
-    import streamlit as st
-    import numpy as np
-    import joblib
-    from sklearn.ensemble import RandomForestRegressor
-
-
-
+install_required_libraries()
+# Retry importing libraries
+import streamlit as st
+import numpy as np
+import joblib
+from sklearn.ensemble import RandomForestRegressor
 
 
 # Function to load the saved model
