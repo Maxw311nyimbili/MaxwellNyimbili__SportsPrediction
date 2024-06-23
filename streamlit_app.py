@@ -31,7 +31,7 @@ try:
     import numpy as np
     import joblib
     from sklearn.ensemble import RandomForestRegressor
-except ImportError:
+except ModuleNotFoundError:
     # If import fails, install required libraries
     install_required_libraries()
     # Retry importing libraries
