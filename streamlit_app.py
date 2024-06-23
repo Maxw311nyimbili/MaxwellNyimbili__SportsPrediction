@@ -26,11 +26,11 @@ def install_required_libraries():
 
 
 
-# If import fails, install required libraries
+#install required libraries
 install_required_libraries()
 
 
-# Retry importing libraries
+# Then import the required libraries
 import streamlit as st
 import numpy as np
 import joblib
@@ -40,7 +40,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 
 
-# Function to load the saved model
+# The function loads the saved model
 def load_model(model_path):
     try:
         loaded_model = joblib.load(model_path)
