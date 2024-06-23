@@ -38,7 +38,6 @@ def main():
     prediction = predict(model, input_data)
 
     with st.sidebar:
-
         # Display prediction in the main page
         predicted_performance = prediction[0].round(6)
         st.subheader('Predicted Overall Performance:')
